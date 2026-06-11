@@ -22,7 +22,7 @@ The format of this SDK closely mirrors the node.js SDK. For example, to retrieve
 ```csharp
     using ConductorSdk;
 
-    var conductor = new();
+    var conductor = new("CONDUCOTR_SECRET_KEY"); 
 
     var transaction = await conductor.Qbd.Transactions.Retrieve("123ABC-1234567890", "end_usr_1234567abcdefg");
 

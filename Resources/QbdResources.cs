@@ -18,7 +18,7 @@ public class QbdResource
     /// Checks whether the specified QuickBooks Desktop connection is active and can process requests end-to-end.
     /// </summary>
     /// <param name="ConductorEndUserId">The ID of the End-User to receive this request.</param>
-    /// <returns>An object with the duratino of the health check in millisends. Returns an error if the health check fails.</returns>
+    /// <returns>An object with the duration of the health check in milliseconds. Returns an error if the health check fails.</returns>
     public async Task<(int Duration, string Status)> HealthCheck(string conductorEndUserId, CancellationToken cancellationToken = default)
     {
         using var request = new HttpRequestMessage(HttpMethod.Get, "/v1/quickbooks-desktop/health-check");

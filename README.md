@@ -1,6 +1,9 @@
 # Conductor SDK for .NET
 A dotnet native SDK for [conductor.is](https://conductor.is)
 
+[!WARNING]
+This SDK is in early development, is not fully implemented, and may contain breaking changes. Use with caution and please report any issues you encounter.
+
 ## Usage
 The format of this SDK closely mirrors the node.js SDK. For example, to retrieve a transaction by ID:
 - Node: 

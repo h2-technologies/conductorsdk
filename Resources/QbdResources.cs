@@ -7,9 +7,11 @@ namespace ConductorSdk.Resources;
 public class QbdResource
 {
     private readonly HttpClient _client;
+    public TransactionsResource TransactionsResource;
     public QbdResource(HttpClient httpClient)
     {
         _client = httpClient;
+        TransactionsResource = new TransactionsResource(_client);
         //TODO: Fill with resource engines as properties
       
     }

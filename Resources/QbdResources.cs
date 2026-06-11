@@ -50,4 +50,5 @@ public class QbdResource
 
         return await response.Content.ReadFromJsonAsync<(int duration, string status)>(cancellationToken: cancellationToken);
     }
+
 }

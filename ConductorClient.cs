@@ -8,6 +8,7 @@ public class ConductorClient : IDisposable
 	private readonly HttpClient _httpClient;
 
 	public QbdResource Qbd { get; }
+	public EndUsers EndUsers { get; }
 
 	public ConductorClient(string apiKey)
 	{
@@ -15,7 +16,8 @@ public class ConductorClient : IDisposable
 		_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 		_httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-		Qbd = new QbdResource(_httpClient);
+		Qbd = new(_httpClient);
+		EndUsers = new(_httpClient);
 
 	}
 
@@ -25,3 +27,4 @@ public class ConductorClient : IDisposable
 		GC.SuppressFinalize(this);
 	}
 }
+
